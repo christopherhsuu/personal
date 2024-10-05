@@ -6,12 +6,8 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("img/yankees.jpg");
-    background-color: #333;
-    background-size: cover;
-    background-position: center;
+    background-image: url('img/yankees.jpg');
     background-attachment: fixed;
-    min-height: 100vh;
 }
 
 
