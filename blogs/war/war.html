@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Understanding WAR (Wins Above Replacement)</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link to your CSS -->
+</head>
+
+<body>
+    <header>
+        <h1>Christopher's Baseball Blog</h1>
+        <p>Exploring the world of Sabermetrics</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../articles.html">Articles</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="blog-post">
+            <article>
+                <h2>Understanding WAR (and Why It’s So Useful)</h2>
+                <p>
+                    In the ever-evolving world of baseball, traditional statistics like <strong>Batting Average (BA)</strong> and <strong>Earned Run Average (ERA)</strong> no longer provide the complete picture of a player’s value. In the past, these surface-level statistics were used to determine everything, ranging from the order of the lineup to <strong>Hall of Fame</strong> inductions. Enter Bill James’ <strong>Wins Above Replacement (WAR)</strong>, a crucial metric used to measure a player’s overall contribution to their team’s success.
+                </p>
+                <p>
+                    If you are new to the world of <strong>Sabermetrics</strong>, let me guide you through what WAR is, why it’s so important, and how it is used in today’s game.
+                </p>
+
+                <h3>What is WAR?</h3>
+                <p>
+                    WAR, as I mentioned earlier, stands for <strong>Wins Above Replacement</strong>. This single stat estimates how many wins a player contributes to their team compared to a hypothetical “replacement player”. Essentially, the higher the WAR, the more value a player brings to his team.
+                </p>
+                <p>
+                    It is important to note that this hypothetical “replacement player” refers to a player who would not usually have a guaranteed spot on a team’s roster, but instead would be called up for spot starts to replace an injured or slumping player. Replacement players are also called AAAA players because they are too good to be in the minor leagues (AAA), but not good enough to stay in the MLB, so they bounce back and forth.
+                </p>
+                <p>
+                    WAR is unique because it factors in contributions in many areas of a player’s game, and tries to be even for both players and pitchers. This is important because, unlike almost every other statistic (which is unique to either position players or pitchers), every player on an MLB roster has a WAR value, be it positive or negative (yes, players can have negative WAR).
+                </p>
+                <p>
+                    As the league’s run environment changes from year to year (which could be due to juiced balls, rule changes, or other factors), WAR must take this into account. Thus, many factors used to calculate WAR have league-adjusted indexes that normalize specific offensive statistics. This ensures that players are evaluated fairly across different seasons, even when the overall league scoring environment fluctuates.
+                </p>
+                <p>
+                    In acknowledging that WAR is assigned to both pitchers and position players, we recognize that there are two different formulae for calculating WAR.
+                </p>
+                <p><strong>Note:</strong> There are many ways to calculate WAR, but the most widely used version is <strong>bWAR</strong> (Baseball-Reference Wins Above Replacement). For our purposes, this is the version that I will refer to unless specified otherwise.</p>
+
+                <h3>WAR for Position Players</h3>
+                <p>
+                    WAR for position players has six components:
+                </p>
+                <ul>
+                    <li>Batting Runs (Rbat)</li>
+                    <li>Baserunning Runs (Rbr)</li>
+                    <li>Runs added or lost due to GIDP (grounding into Double Plays) (Rdp)</li>
+                    <li>Fielding Runs (Rdef)</li>
+                    <li>Positional Adjustment Runs (Rpos)</li>
+                    <li>Replacement Level Runs (Rrep) based on playing time</li>
+                </ul>
+                <p>
+                    To get WAR, we simply divide the sum of these values by <strong>Runs per win</strong>. I will give a quick rundown on what each factor represents in the total calculation of WAR, but fuller explanations can be found in the statistics index.
+                </p>
+
+                <h4>Batting Runs (Rbat)</h4>
+                <p>
+                    Batting runs are based on a stat called <strong>wRAA</strong> (Weighted Runs Above Average), which uses <strong>wOBA</strong> (Weighted On-Base Average). It accounts for how often a player gets on base and how much value those offensive events (hits, walks, etc.) provide relative to their league. This means that there are different weights for singles, doubles, home runs, etc.
+                </p>
+
+                <h4>Baserunning Runs (Rbr)</h4>
+                <p>
+                    Evaluates how often a player advances extra bases (like going from first to third on a single) or avoids making outs on the bases compared to the league average. It also accounts for outs made on the bases (such as getting picked off at first). Stolen bases and caught stealings are factored in separately.
+                </p>
+
+                <h4>Grounded into Double Play Runs (Rdp)</h4>
+                <p>
+                    Grounding into double plays (GIDP) negatively impacts a player’s offensive production, and players have a significant impact on their likelihood of grounding into double plays. Slow righties tend to ground into more double plays than slap-hitting lefties. This stat measures a player’s ability to avoid grounding into double plays, adjusted for their opportunities to do so.
+                </p>
+
+                <h4>Fielding Runs (Rdef)</h4>
+                <p>
+                    Fielding measures are often controversial, as they have historically been subjective. Errors alone as a statistic were arbitrary and inconsistent. Thus, <strong>Rdef</strong> aims to measure a player’s defensive contribution to their team, calculated through <strong>Defensive Runs Saved (DRS)</strong>.
+                </p>
+
+                <h4>Positional Adjustment (Rpos)</h4>
+                <p>
+                    The positional adjustment accounts for the fact that some defensive positions are harder and more taxing on a player than others. More difficult positions (like catcher or shortstop) get a positive adjustment, while less demanding positions (like first base or designated hitter) receive a negative adjustment.
+                </p>
+
+                <h4>Replacement Level (Rrep)</h4>
+                <p>
+                    Replacement level is the concept of what a team could expect from a freely available player, someone from the minors or free agents. The replacement level is set at a .294 winning percentage. This means that a team full of replacement-level players would win 29.4% of their games. For the major leagues as a whole, there are about <strong>1,000 Wins Above Replacement</strong> available to divide between players. The proportion of WAR assigned to pitchers and position players reflects the ratio of salaries spent on each group—41% for pitchers, and 59% for position players.
+                </p>
+                <p>
+                    For offense, the replacement level corresponds to <strong>20.5 runs over 600 plate appearances</strong>. These 20.5 runs are the Replacement Level multiplier.
+                </p>
+
+                <h3>Graphs and Visual Aids</h3>
+                <p>Below are some charts and graphs that illustrate how WAR is calculated and how different players contribute across various components of WAR:</p>
+                <!-- Placeholder for images/graphs -->
+                <img src="../img/war_graph_example.jpg" alt="WAR Calculation Graph" style="width:100%;height:auto;">
+                <p>Fig. 1 - Example of WAR breakdown across various components.</p>
+
+                <img src="../img/war_players_example.jpg" alt="WAR Comparison Graph" style="width:100%;height:auto;">
+                <p>Fig. 2 - Comparison of WAR for different MLB players.</p>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christopher's Baseball Blog. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
