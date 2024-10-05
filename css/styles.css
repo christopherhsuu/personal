@@ -6,8 +6,6 @@
 }
 
 body {
-    background-image: url('img/yankees.jpg');
-    background-attachment: fixed;
 }
 
 
@@ -68,6 +66,8 @@ main {
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    background-image: url('/img/yankees.jpg');
+    background-attachment: fixed;
 }
 
 section h2 {
